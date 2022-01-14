@@ -7,14 +7,6 @@ use Illuminate\Support\Facades\Route;
 //200 OK
 Route::post('/reset', 'ResetController@reset');
 
-//Deposit into existing account
-//POST /event {"type":"deposit", "destination":"100", "amount":10}
-//201 {"destination": {"id":"100", "balance":20}}
-
-
-//Get balance for existing account
-//GET /balance?account_id=100
-//200 20
 Route::get('/balance', 'BalanceController@show');
 
 //Withdraw from non-existing account
